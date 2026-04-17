@@ -2,12 +2,80 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Font Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>factura</title>
         <link rel="stylesheet" href="./style/style.css" />
     </head>
     <body>
-    
+        <nav>
+            <div class="drawer lg:drawer-open">
+                <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+                <div class="drawer-content flex flex-col items-left justify-center p-4">
+                    <!-- Page content here -->
+                    <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost  lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            class="inline-block h-6 w-6 stroke-current"
+                        >
+                            <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                            ></path>
+                        </svg>
+                    </label>
+                </div>
+                <div class="drawer-side ">
+                    <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+                    <ul class="menu bg-base-200 min-h-full w-80 p-4 bg-base-content text-secondary">
+                        <div>
+                        <a href="./accueil.html" class="btn btn-ghost normal-case text-xl">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            factura
+                        </a>
+                    </div>
+                    <!-- Sidebar content here -->
+                        <li>
+                            <a href="./accueil.html" class="btn btn-ghost">
+                                <i class="fa-regular fa-house"></i>
+                                Tableau de bord
+                            </a>
+                        </li>
+                        <li>
+                            <p>CLIENTS</p>
+                            <a href="./client.html" class="btn btn-ghost">
+                                <i class="fa-solid fa-circle-user"></i>
+                                Liste des clients
+                            </a>
+                        </li>
+                        <li>
+                            <p>FACTURES</p>
+                            <a href="./factures.html" class="btn btn-ghost">
+                                <i class="fa-solid fa-file"></i>
+                                Facture
+                            </a>
+                        </li>
+                        <li>
+                            <p>DEVIS</p>
+                            <a href="./devis.html" class="btn btn-ghost">
+                                <i class="fa-solid fa-inbox"></i>
+                                Devis
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </body>
 </html>
