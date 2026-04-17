@@ -13,69 +13,142 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>factura</title>
         <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/accueil.css" />
     </head>
     <body>
-        <nav>
-            <div class="drawer lg:drawer-open">
-                <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content flex flex-col items-left justify-center p-4">
-                    <!-- Page content here -->
-                    <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost  lg:hidden">
+        <div class="drawer lg:drawer-open">
+            <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+                <div class="drawer-content flex flex-col items-left lg:justify-start lg:items-start p-4">
+<!------------------ Page content here ------------------------>
+        <section class="flex flex-col p-4 gap-4 items-center lg:items-start">
+            <div class="flex flex-col gap-2 text-center lg:text-left">
+                <h1 class="text-xl font-bold font-inter">
+                    Tableau de bord
+                </h1>
+                <p class="text-md">Bienvenue sur votre espace de gestion</p>
+            </div>
+            <div class="stats stats-vertical lg:stats-horizontal shadow">
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            class="inline-block h-6 w-6 stroke-current"
+                            class="inline-block h-8 w-8 stroke-current"
                         >
                             <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                             ></path>
                         </svg>
-                    </label>
+                    </div>
+                    <div class="stat-title">Downloads</div>
+                    <div class="stat-value">31K</div>
+                    <div class="stat-desc">Jan 1st - Feb 1st</div>
                 </div>
-                <div class="drawer-side ">
-                    <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
-                    <ul class="menu bg-base-200 min-h-full w-80 p-4 bg-base-content text-secondary">
-                        <div>
+
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            class="inline-block h-8 w-8 stroke-current"
+                        >
+                            <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">New Users</div>
+                    <div class="stat-value">4,200</div>
+                    <div class="stat-desc">↗︎ 400 (22%)</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            class="inline-block h-8 w-8 stroke-current"
+                        >
+                            <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">New Registers</div>
+                    <div class="stat-value">1,200</div>
+                    <div class="stat-desc">↘︎ 90 (14%)</div>
+                </div>
+            </div>
+        </section>
+<!------------------ End page content ------------------------->
+                <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost bg-base-content hamburger lg:hidden">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        class="inline-block h-6 w-6 stroke-current text-secondary"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="drawer-side">
+                <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
+                <ul class="menu bg-base-200 min-h-full w-80 p-4 bg-base-content text-secondary">
+                    <div>
                         <a href="./accueil.html" class="btn btn-ghost normal-case text-xl">
                             <i class="fa-solid fa-file-invoice"></i>
                             factura
                         </a>
                     </div>
-                    <!-- Sidebar content here -->
-                        <li>
-                            <a href="./accueil.html" class="btn btn-ghost">
-                                <i class="fa-regular fa-house"></i>
+                    <span class="divider divider-secondary"></span>
+<!---------------- Sidebar content here ----------------------->
+                    <li>
+                        <a href="./accueil.html" class="btn btn-ghost">
+                            <i class="fa-regular fa-house"></i>
                                 Tableau de bord
-                            </a>
-                        </li>
-                        <li>
-                            <p>CLIENTS</p>
-                            <a href="./client.html" class="btn btn-ghost">
-                                <i class="fa-solid fa-circle-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <p>CLIENTS</p>
+                        <a href="./client.html" class="btn btn-ghost">
+                            <i class="fa-solid fa-circle-user"></i>
                                 Liste des clients
-                            </a>
-                        </li>
-                        <li>
-                            <p>FACTURES</p>
-                            <a href="./factures.html" class="btn btn-ghost">
-                                <i class="fa-solid fa-file"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <p>FACTURES</p>
+                        <a href="./factures.html" class="btn btn-ghost">
+                            <i class="fa-solid fa-file"></i>
                                 Facture
-                            </a>
-                        </li>
-                        <li>
-                            <p>DEVIS</p>
-                            <a href="./devis.html" class="btn btn-ghost">
-                                <i class="fa-solid fa-inbox"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <p>DEVIS</p>
+                        <a href="./devis.html" class="btn btn-ghost">
+                            <i class="fa-solid fa-inbox"></i>
                                 Devis
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
     </body>
 </html>
