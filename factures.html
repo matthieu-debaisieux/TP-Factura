@@ -49,7 +49,7 @@
                     <th>ACTIONS</th>
                     </tr>
                 </thead>
-                <tbody class="text-center">
+                <tbody class="text-center" id="facturesTableau">
                     <!-- row 1 -->
                     <tr>
                     <th>FAC-001</th>
@@ -61,7 +61,7 @@
                         <span class="badge badge-soft badge-success">Payée</span>
                     </td>
                     <td>
-                        <button class="btn btn-ghost btn-error">
+                        <button class="btn btn-ghost btn-error"  onclick="supprimerFacture('FAC-001', this)">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -79,7 +79,7 @@
                         >
                     </td>
                     <td>
-                        <button class="btn btn-ghost btn-error">
+                        <button class="btn btn-ghost btn-error"  onclick="supprimerFacture('FAC-001', this)">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -95,7 +95,7 @@
                         <span class="badge badge-soft badge-error">En retard</span>
                     </td>
                     <td>
-                        <button class="btn btn-ghost btn-error">
+                        <button class="btn btn-ghost btn-error"  onclick="supprimerFacture('FAC-001', this)">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -111,7 +111,7 @@
                         <span class="badge badge-soft badge-success">Payée</span>
                     </td>
                     <td>
-                        <button class="btn btn-ghost btn-error">
+                        <button class="btn btn-ghost btn-error"  onclick="supprimerFacture('FAC-001', this)">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -129,7 +129,7 @@
                         >
                     </td>
                     <td>
-                        <button class="btn btn-ghost btn-error">
+                        <button class="btn btn-ghost btn-error"  onclick="supprimerFacture('FAC-001', this)">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -153,7 +153,61 @@
                 </tbody>
                 </table>
             </div>
-            </section>
+        </section>
+        <section class="w-full max-w-full">
+            <form id="factureForm" class="p-6 bg-base-100 rounded-box border border-base-200 w-full max-w-full">
+            <h2 class="text-lg font-semibold mb-5">Nouvelle facture</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Client -->
+                    <div class="form-control w-full">
+                    <label class="label pb-1">
+                        <span class="label-text text-sm">Client <span class="text-error">*</span></span>
+                    </label>
+                    <select id="selectClient" class="select select-bordered w-full">
+                        <option disabled selected value="">Sélectionner un client</option>
+                    </select>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="form-control w-full">
+                    <label class="label pb-1">
+                        <span class="label-text text-sm">Date <span class="text-error">*</span></span>
+                    </label>
+                    <input id="dateFacture" type="date" class="input input-bordered w-full" />
+                    </div>
+
+                    <!-- Montant HT -->
+                    <div class="form-control w-full">
+                    <label class="label pb-1">
+                        <span class="label-text text-sm">Montant HT (€) <span class="text-error">*</span></span>
+                    </label>
+                    <input id="montantHT" type="number" step="0.01" min="0" placeholder="0.00" class="input input-bordered w-full" />
+                    <label class="label pt-1">
+                        <span id="montantTTC" class="label-text-alt text-base-content/60">Montant TTC : —</span>
+                    </label>
+                    </div>
+
+                    <!-- Statut -->
+                    <div class="form-control w-full">
+                    <label class="label pb-1">
+                        <span class="label-text text-sm">Statut</span>
+                    </label>
+                    <select id="selectStatut" class="select select-bordered w-full">
+                        <option selected>En attente</option>
+                        <option>Payée</option>
+                        <option>En retard</option>
+                    </select>
+                    </div>
+                </div>
+
+                <!-- Boutons -->
+                <div class="flex gap-3 mt-6">
+                    <button type="submit" class="btn btn-primary">Créer la facture</button>
+                    <button type="button" id="btnAnnuler" class="btn btn-ghost">Annuler</button>
+                </div>
+            </form>
+        </section>
 <!------------------ End page content ------------------------->
             <label
             for="my-drawer-3"
@@ -253,5 +307,6 @@
             </ul>
         </div>
         </div>
+        <script src="./src/factures.js"></script>
     </body>
 </html>
