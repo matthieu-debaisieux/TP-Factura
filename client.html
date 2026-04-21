@@ -2,12 +2,274 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
         <title>factura</title>
         <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/accueil.css" />
     </head>
     <body>
-    
+        <div class="drawer lg:drawer-open">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+        <div
+            class="drawer-content flex flex-col items-left lg:justify-start lg:items-start p-4"
+        >
+<div class="flex justify-between items-center w-full px-4 mb-4">
+                <div>
+                    <h1 class="text-2xl font-bold">Clients</h1>
+                    <p class="text-sm opacity-60">5 clients</p>
+                </div>
+                <button class="btn btn-primary bg-[#6366f1] border-none text-white">
+                    <i class="fa-solid fa-plus"></i> Nouveau client
+                </button>
+            </div>
+
+<section
+            class="flex flex-col p-4 gap-4 items-center lg:items-start w-full max-w-full"
+            >
+            <div
+                class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 w-full max-w-full"
+            >
+                <table class="table w-full min-w-full">
+                <thead class="text-left">
+                    <tr class="opacity-50">
+                    <th>NOM</th>
+                    <th>PRÉNOM</th>
+                    <th>EMAIL</th>
+                    <th>TÉLÉPHONE</th>
+                    <th>VILLE</th>
+                    <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody class="text-left" id="clientsTableau">
+                    <tr>
+                    <th class="font-bold">Martin</th>
+                    <td>Alice</td>
+                    <td>alice.martin@gmail.com</td>
+                    <td>06 12 34 56 78</td>
+                    <td>Lyon</td>
+                    <td>
+                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <span>Supprimer</span>
+                        </button>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th class="font-bold">Dupont</th>
+                    <td>Marc</td>
+                    <td>marc.dupont@gmail.com</td>
+                    <td>06 98 76 54 32</td>
+                    <td>Paris</td>
+                    <td>
+                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <span>Supprimer</span>
+                        </button>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th class="font-bold">Bernard</th>
+                    <td>Sophie</td>
+                    <td>sophie.b@outlook.com</td>
+                    <td>07 11 22 33 44</td>
+                    <td>Lyon</td>
+                    <td>
+                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <span>Supprimer</span>
+                        </button>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th class="font-bold">Lefebvre</th>
+                    <td>Thomas</td>
+                    <td>thomas.lef@gmail.com</td>
+                    <td>06 55 66 77 88</td>
+                    <td>Bordeaux</td>
+                    <td>
+                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <span>Supprimer</span>
+                        </button>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th class="font-bold">Moreau</th>
+                    <td>Julie</td>
+                    <td>julie.moreau@yahoo.fr</td>
+                    <td>07 44 55 66 77</td>
+                    <td>Nantes</td>
+                    <td>
+                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <span>Supprimer</span>
+                        </button>
+                    </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="w-full max-w-full">
+    <form id="clientForm" class="p-6 bg-base-100 rounded-box border border-base-200 w-full max-w-full">
+        <h2 class="text-lg font-semibold mb-5">Nouveau client</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-control w-full">
+                <label class="label pb-1">
+                    <span class="label-text text-sm font-semibold">Nom <span class="text-error">*</span></span>
+                </label>
+                <input type="text" id="nomClient" placeholder="Nom" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control w-full">
+                <label class="label pb-1">
+                    <span class="label-text text-sm font-semibold">Prénom <span class="text-error">*</span></span>
+                </label>
+                <input type="text" id="prenomClient" placeholder="Prénom" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control w-full">
+                <label class="label pb-1">
+                    <span class="label-text text-sm font-semibold">Email <span class="text-error">*</span></span>
+                </label>
+                <input type="email" id="emailClient" placeholder="email@exemple.com" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control w-full">
+                <label class="label pb-1">
+                    <span class="label-text text-sm font-semibold">Téléphone</span>
+                </label>
+                <input type="text" id="telClient" placeholder="06 00 00 00 00" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control w-full">
+                <label class="label pb-1">
+                    <span class="label-text text-sm font-semibold">Adresse</span>
+                </label>
+                <input type="text" id="adresseClient" placeholder="Adresse" class="input input-bordered w-full" />
+            </div>
+
+            <div class="form-control w-full">
+                <label class="label pb-1">
+                    <span class="label-text text-sm font-semibold">Ville</span>
+                </label>
+                <input type="text" id="villeClient" placeholder="Ville" class="input input-bordered w-full" />
+            </div>
+        </div>
+
+        <div class="flex gap-3 mt-6">
+            <button type="submit" class="btn btn-primary bg-[#6366f1] border-none text-white">Ajouter le client</button>
+            <button type="button" id="btnAnnuler" class="btn btn-ghost border border-base-300">Annuler</button>
+        </div>
+    </form>
+</section>
+<label
+            for="my-drawer-3"
+            aria-label="open sidebar"
+            class="btn btn-square btn-ghost bg-base-content hamburger lg:hidden"
+            >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-6 w-6 stroke-current text-secondary"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+            </svg>
+            </label>
+        </div>
+        <div class="drawer-side">
+            <label
+            for="my-drawer-3"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+            ></label>
+            <ul
+            class="menu bg-base-200 min-h-full w-50 p-2 bg-[#1e1b4b] text-white"
+            >
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="avatar avatar-placeholder">
+                        <div class="bg-[#6366f1] text-white w-10 rounded-xl flex items-center justify-center">
+                            <span class="text-xl font-bold">F</span>
+                        </div>
+                    </div>
+                    <a href="./accueil.html" class="normal-case text-xl font-bold">
+                    factura
+                    </a>
+                </div>
+<li>
+                    <a href="./accueil.html" class="btn-ghost">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    Tableau de bord
+                    </a>
+                </li>
+                <li>
+                    <p class="text-xs opacity-50 font-bold uppercase mt-4">CLIENTS</p>
+                    <a href="./client.html" class="bg-white/10">
+                        <i class="fa-solid fa-circle-user"></i>
+                        Liste des clients
+                    </a>
+                    <a href="./client.html">
+                        <i class="fa-solid fa-plus"></i>
+                        Nouveau client
+                    </a>
+                </li>
+                <li>
+                    <p class="text-xs opacity-50 font-bold uppercase mt-4">FACTURES</p>
+                    <a href="./factures.html">
+                        <i class="fa-solid fa-file"></i>
+                        Liste des factures
+                    </a>
+                    <a href="./factures.html">
+                        <i class="fa-solid fa-plus"></i>
+                        Nouvelle facture
+                    </a>
+                </li>
+                <li>
+                    <p class="text-xs opacity-50 font-bold uppercase mt-4">DEVIS</p>
+                    <a href="./devis.html">
+                        <i class="fa-solid fa-inbox"></i>
+                        Liste des devis
+                    </a>
+                    <a href="./devis.html">
+                        <i class="fa-solid fa-plus"></i>
+                        Nouveau devis
+                    </a>
+                </li>
+                <div class="mt-auto">
+                    <div class="divider opacity-20"></div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-2 items-center py-2 px-4">
+                            <div class="avatar avatar-placeholder">
+                                <div class="bg-blue-400 text-white w-8 rounded-full flex items-center justify-center">
+                                    <span class="text-xs">A</span>
+                                </div>
+                            </div>
+                            <span class="text-sm">Admin</span>
+                        </div>
+                        <a href="./index.html" class="btn btn-ghost text-error justify-start">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Déconnexion
+                        </a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        </div>
+        <script src="./src/client.js"></script>
     </body>
 </html>
