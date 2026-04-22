@@ -26,7 +26,27 @@
         <div
             class="drawer-content flex flex-col items-left lg:justify-start lg:items-start p-4"
         >
-<div class="flex justify-between items-center w-full px-4 mb-4">
+        <label
+            for="my-drawer-3"
+            aria-label="open sidebar"
+            class="btn btn-square btn-ghost bg-base-content hamburger lg:hidden"
+            >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-6 w-6 stroke-current text-secondary"
+            >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+            </svg>
+            </label>
+<!------------------ Page content here ------------------------>
+<div class="flex justify-between items-center w-full p-4 text-center">
                 <div>
                     <h1 class="text-2xl font-bold">Clients</h1>
                     <p class="text-sm opacity-60">5 clients</p>
@@ -35,8 +55,8 @@
                     <i class="fa-solid fa-plus"></i> Nouveau client
                 </button>
             </div>
-
-<section
+<!------------------Le tableau--------------------->
+    <section
             class="flex flex-col p-4 gap-4 items-center lg:items-start w-full max-w-full"
             >
             <div
@@ -61,7 +81,7 @@
                     <td>06 12 34 56 78</td>
                     <td>Lyon</td>
                     <td>
-                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <button class="btn btn-ghost text-error">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -73,7 +93,7 @@
                     <td>06 98 76 54 32</td>
                     <td>Paris</td>
                     <td>
-                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <button class="btn btn-ghost text-error">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -85,7 +105,7 @@
                     <td>07 11 22 33 44</td>
                     <td>Lyon</td>
                     <td>
-                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <button class="btn btn-ghost text-error ">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -97,7 +117,7 @@
                     <td>06 55 66 77 88</td>
                     <td>Bordeaux</td>
                     <td>
-                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <button class="btn btn-ghost text-error ">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -109,7 +129,7 @@
                     <td>07 44 55 66 77</td>
                     <td>Nantes</td>
                     <td>
-                        <button class="btn btn-ghost text-error lowercase p-0 min-h-0 h-auto">
+                        <button class="btn btn-ghost text-error">
                         <span>Supprimer</span>
                         </button>
                     </td>
@@ -172,25 +192,7 @@
         </div>
     </form>
 </section>
-<label
-            for="my-drawer-3"
-            aria-label="open sidebar"
-            class="btn btn-square btn-ghost bg-base-content hamburger lg:hidden"
-            >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="inline-block h-6 w-6 stroke-current text-secondary"
-            >
-                <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-            </svg>
-            </label>
+<!------------------ End page content ------------------------->
         </div>
         <div class="drawer-side">
             <label
@@ -199,7 +201,7 @@
             class="drawer-overlay"
             ></label>
             <ul
-            class="menu bg-base-200 min-h-full w-50 p-2 bg-[#1e1b4b] text-white"
+            class="menu bg-base-200 min-h-full w-50 p-2 bg-base-content text-secondary"
             >
                 <div class="flex items-center gap-2 mb-4">
                     <div class="avatar avatar-placeholder">
