@@ -29,8 +29,20 @@
             class="drawer-content flex flex-col items-left lg:justify-start lg:items-start p-4"
         >
 <!------------------ Page content here ------------------------>
+        <section class="flex flex-col items-center text-center lg:items-start lg:flex-row lg:justify-between w-full max-w-full my-4">
+            <div>
+                <h1 class="text-2xl font-bold">Factures</h1>
+                <p>6 factures</p>
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-primary" onclick="document.getElementById('factureForm').scrollIntoView({ behavior: 'smooth' })">
+                <i class="fa-solid fa-plus"></i>
+                Nouvelle facture
+                </button>
+            </div>
+        </section>
 <!------------------Le tableau--------------------->
-            <section
+        <section
             class="flex flex-col p-4 gap-4 items-center lg:items-start w-full max-w-full"
             >
             <div
