@@ -56,7 +56,7 @@ window.onload = function() {
             const found = users.find(u => u.login === userVal && u.password === passVal);
 
             if (found) {
-                window.location.href = "client.html";
+                window.location.href = "accueil.html";
             } else {
                 globalError.classList.remove('hidden');
                 document.getElementById('identifiant').classList.add('border-red-500');
