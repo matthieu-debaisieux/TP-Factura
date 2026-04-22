@@ -12,3 +12,21 @@ html {
 body{
     background-color: #f1f5f9;
 }
+
+.hamburger{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+li{
+    margin-bottom: 0.5rem;
+}
+
+li p{
+    pointer-events: none;
+}
+
+.avatar{
+    cursor: pointer;
+}
